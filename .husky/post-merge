@@ -3,4 +3,7 @@
  
 yarn run post-merge
 git diff ORIG_HEAD HEAD package.json && yarn install
-CHANGED_FILES="$(git diff ORIG_HEAD HEAD package.json)"
+
+CHANGED_FILES="$(git diff-tree ORIG_HEAD HEAD -r --name-only --no-commit-id)"
+EXIT_CODE="$(git diff ORIG_HEAD HEAD package.json --exit-code)"
+echo $EXIT_CODE
