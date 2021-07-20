@@ -15,6 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "pre-merge-commit": "node -e \"console.log('Ran pre-merge-commit!')\"",
+    "post-merge": "node -e \"console.log('Ran post-merge!')\"",
+    "pre-commit": "node -e \"console.log('Ran pre-commit!')\"",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
