@@ -2,6 +2,4 @@
 . "$(dirname "$0")/_/husky.sh"
  
 yarn run post-merge
-
-VAR="$(git diff ORIG_HEAD HEAD --exit-code package.json && yarn install)"
-echo "$VAR"
+git diff ORIG_HEAD HEAD --exit-code package.json && yarn install
