@@ -4,7 +4,6 @@
 yarn run post-merge
 
 CHANGED_FILES="$(git diff-tree ORIG_HEAD HEAD -r --name-only --no-commit-id)"
-EXIT_CODE="$(git diff --exit-code ORIG_HEAD HEAD package.json)"
+EXIT_CODE="$(git diff ORIG_HEAD HEAD package.json)"
 
-if [$EXIT_CODE == 1]
-echo "asdf"
+echo $EXIT_CODE
