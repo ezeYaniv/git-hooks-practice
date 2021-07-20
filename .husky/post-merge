@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-git diff package.json
+git diff --exit-code --no-patch package.json
