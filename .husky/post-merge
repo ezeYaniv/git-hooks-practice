@@ -3,4 +3,4 @@
  
 yarn run post-merge
 GIT_DIFF="$(git diff ORIG_HEAD HEAD --quiet --exit-code package.json)"
-echo GIT_DIFF
+echo $GIT_DIFF
