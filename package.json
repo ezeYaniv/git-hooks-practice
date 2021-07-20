@@ -1,6 +1,6 @@
 {
   "name": "git-hooks-practice",
-  "version": "0.1.0",
+  "version": "0.1.0ddd",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -21,6 +21,7 @@
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -40,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "husky": "^7.0.0"
+        "husky": "^7.0.0"
   }
 }
