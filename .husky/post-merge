@@ -6,7 +6,7 @@ yarn run post-merge
 CHANGED_FILES="$(git diff-tree ORIG_HEAD HEAD -r --name-only --no-commit-id)"
 
 check_run() {
-	echo "$CHANGED_FILES" | grep "$1"
+	grep "$1"
 }
 
 check_run package.json
