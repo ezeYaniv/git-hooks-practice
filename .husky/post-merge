@@ -3,5 +3,5 @@
  
 yarn run post-merge
 
-diff_requirements = "$(git diff ORIG_HEAD HEAD --exit-code package.json)"
-echo "$diff_requirements"
+VAR="$(git diff ORIG_HEAD HEAD --exit-code package.json)"
+echo "$VAR"
