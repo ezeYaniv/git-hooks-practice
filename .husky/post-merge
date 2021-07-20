@@ -6,6 +6,6 @@ diff_requirements = 'git diff ORIG_HEAD HEAD --exit-code -- package.json'
 
 exit_code = subprocess.call(diff_requirements.split())
 if exit_code == 1:
-    print 'The requirements file has changed! Remember to install new dependencies.'
+    yarn install
 else:
     print 'No new dependencies.'
