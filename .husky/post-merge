@@ -1,5 +1,11 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
- 
-yarn run post-merge
-git diff ORIG_HEAD HEAD --no-patch --exit-code package.json && yarn install
+#!/usr/bin/env python
+import sys
+import subprocess
+
+diff_requirements = 'git diff ORIG_HEAD HEAD --exit-code -- requirements.txt'
+
+exit_code = subprocess.call(diff_requirements.split())
+if exit_code == 1:
+    print 'The requirements file has changed! Remember to install new dependencies.'
+else:
+    print 'No new dependencies.'
