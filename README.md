@@ -1,5 +1,5 @@
 # Introduction
-asdf
+
 ## Summary: What does this project do?
 This project runs different git hooks at various points in the version control lifecycle. It's based on a basic create-react-app.
 
