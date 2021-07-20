@@ -8,7 +8,7 @@ yarn run post-merge
 import sys
 import subprocess
 
-diff_requirements = 'git diff ORIG_HEAD HEAD --exit-code -- requirements.txt'
+diff_requirements = 'git diff ORIG_HEAD HEAD --exit-code package.json'
 
 exit_code = subprocess.call(diff_requirements.split())
 if exit_code == 1:
