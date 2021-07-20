@@ -6,7 +6,7 @@ yarn run post-merge
 CHANGED_FILES="$(git diff-tree ORIG_HEAD HEAD -r --name-only --no-commit-id)"
 
 check_run() {
-  case "$1" in *$CHANGED_FILES*) echo "changed pjson!";;
+  case "$1" in *$CHANGED_FILES*) yarn install;;
   esac
 }
 
