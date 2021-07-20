@@ -1,6 +1,6 @@
 {
   "name": "git-hooks-practice",
-  "version": "0.1.0changedpackagejson",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-        "husky": "^7.0.0"
+    "husky": "^7.0.0"
   }
 }
 
