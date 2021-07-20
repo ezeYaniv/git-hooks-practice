@@ -2,8 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
  
 yarn run post-merge
-git diff ORIG_HEAD HEAD package.json && yarn install
 
 CHANGED_FILES="$(git diff-tree ORIG_HEAD HEAD -r --name-only --no-commit-id)"
-EXIT_CODE="$(git diff ORIG_HEAD HEAD package.json --exit-code)"
+EXIT_CODE="$(git diff --exit-code ORIG_HEAD HEAD package.json)"
 echo $EXIT_CODE
