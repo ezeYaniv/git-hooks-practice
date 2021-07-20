@@ -3,3 +3,4 @@
 
 npm run post-merge
 git diff --cached
+node -e "console.log('post-merge asdf')"
