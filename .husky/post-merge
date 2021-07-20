@@ -4,9 +4,4 @@
 yarn run post-merge
 
 CHANGED_FILES="$(git diff-tree ORIG_HEAD HEAD -r --name-only --no-commit-id)"
-
-check_run() {
-	echo "$CHANGED_FILES" | grep --quiet "$1"
-}
-
-check_run package.json
+git diff --exit-code --no-patch ORIG_HEAD HEAD package.json && yarn install
