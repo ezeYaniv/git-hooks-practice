@@ -1,6 +1,6 @@
 {
   "name": "git-hooks-practice",
-  "version": "0.1.0changes27",
+  "version": "0.1.0changes28",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
