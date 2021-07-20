@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
  
 yarn run post-merge
-GIT_DIFF="$(git diff ORIG_HEAD HEAD --quiet --exit-code package.json)"
+GIT_DIFF="$((git diff ORIG_HEAD HEAD --quiet --exit-code package.json).split())"
 echo $GIT_DIFF
