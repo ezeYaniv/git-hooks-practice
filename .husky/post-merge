@@ -3,10 +3,15 @@
  
 yarn run post-merge
 
-changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)"
 
-check_run() {
-  echo "$changed_files" | grep -E --quiet "$1" && eval "$2"
-}
 
-check_run package.json "yarn install"
+import sys
+import subprocess
+
+diff_requirements = 'git diff ORIG_HEAD HEAD --exit-code -- requirements.txt'
+
+exit_code = subprocess.call(diff_requirements.split())
+if exit_code == 1:
+    print 'The requirements file has changed! Remember to install new dependencies.'
+else:
+    print 'No new dependencies.'
