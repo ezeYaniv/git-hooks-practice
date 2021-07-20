@@ -2,6 +2,6 @@
 . "$(dirname "$0")/_/husky.sh"
  
 yarn run post-merge
-git diff ORIG_HEAD HEAD package.json && yarn install
+git diff ORIG_HEAD HEAD --quiet package.json && yarn install
 CHANGED_FILES="$(git diff ORIG_HEAD HEAD package.json)"
 echo $CHANGED_FILES
