@@ -5,4 +5,8 @@ yarn run post-merge
 
 CHANGED_FILES="$(git diff-tree ORIG_HEAD HEAD -r --name-only --no-commit-id)"
 
-echo $CHANGED_FILES
+check_run() {
+	echo "$changed_files" | grep --quiet "$1" && eval "$2"
+}
+
+check_run $CHANGED_FILES
