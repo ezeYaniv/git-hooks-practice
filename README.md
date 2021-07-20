@@ -11,4 +11,3 @@ This project runs different git hooks at various points in the version control l
 
 ## Current status: What should future me know about where this project left off?
 
-testing
