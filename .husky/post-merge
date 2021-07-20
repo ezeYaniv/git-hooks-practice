@@ -4,6 +4,5 @@
 yarn run post-merge
 
 CHANGED_FILES="$(git diff-tree ORIG_HEAD HEAD -r --name-only --no-commit-id)"
-EXIT_CODE="$(git diff ORIG_HEAD HEAD package.json)"
 
-echo $EXIT_CODE
+echo $CHANGED_FILES
